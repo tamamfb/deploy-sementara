@@ -1,6 +1,6 @@
 <?php
 // Termasuk file koneksi
-include '../database/connect.php'; 
+include 'src/database/connect.php'; 
 
 // Inisialisasi pesan kesalahan
 $errorMessage = "";
@@ -37,11 +37,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // Cek role dan arahkan ke halaman yang sesuai
                 if ($user['U_Role'] == 0) {
                     // Admin, arahkan ke admin.php
-                    header("Location: ../admin/admin.php");
+                    header("Location: src/admin/admin.php");
                     exit();
                 } elseif ($user['U_Role'] == 1) {
                     // User, arahkan ke bem.php
-                    header("Location: ../user/bem.php");
+                    header("Location: src/user/bem.php");
                     exit();
                 }
             }
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="../output.css" rel="stylesheet" />
+    <link href="src/output.css" rel="stylesheet" />
     <title>Login Page</title>
     <style>
         .load {

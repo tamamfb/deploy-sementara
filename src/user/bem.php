@@ -6,7 +6,7 @@ session_start();
 // Cek apakah user sudah login dan memiliki role user
 if (!isset($_SESSION['email']) || $_SESSION['role'] != 1) {
     // Jika tidak login atau bukan user, redirect ke login.php
-    header("Location: ../home/login.php");
+    header("Location: ../../login.php");
     exit();
 }
 
